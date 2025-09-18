@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/h4"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Top Bar -->
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:contentDescription="Back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/btn_history"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/baseline_history_24"
+            android:contentDescription="History"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Profile Picture -->
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/baseline_person_24"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle_background"
+            android:padding="4dp"
+            app:layout_constraintTop_toBottomOf="@id/btn_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="John Doe"
+            android:textColor="@color/h0"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/profile_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Email -->
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="johndoe@example.com"
+            android:textColor="@color/h0"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Info CardView -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/h3"
+                android:padding="16dp">
+
+                <!-- Address -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:layout_marginBottom="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Address:"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:textColor="@color/h0"/>
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="123 Street, City, Country"
+                        android:layout_weight="2"
+                        android:textColor="@color/h0"/>
+                </LinearLayout>
+
+                <!-- Gender -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:layout_marginBottom="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Gender:"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:textColor="@color/h0"/>
+                    <TextView
+                        android:id="@+id/tv_gender"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Male"
+                        android:layout_weight="2"
+                        android:textColor="@color/h0"/>
+                </LinearLayout>
+
+                <!-- Phone -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:layout_marginBottom="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Phone:"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:textColor="@color/h0"/>
+                    <TextView
+                        android:id="@+id/tv_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="+91 9876543210"
+                        android:layout_weight="2"
+                        android:textColor="@color/h0"/>
+                </LinearLayout>
+
+                <!-- Age -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Age:"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:textColor="@color/h0"/>
+                    <TextView
+                        android:id="@+id/tv_age"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="28"
+                        android:layout_weight="2"
+                        android:textColor="@color/h0"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Edit Profile Button -->
+        <Button
+            android:id="@+id/btn_edit_profile"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="Edit Profile"
+            android:textColor="@color/h0"
+            android:backgroundTint="@color/h1"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@id/card_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:drawableStart="@drawable/baseline_edit_24"
+            android:drawablePadding="8dp"/>
+
+        <!-- Logout Button -->
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="Logout"
+            android:textColor="@color/h0"
+            android:backgroundTint="@color/h2"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@id/btn_edit_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:drawableStart="@drawable/outline_logout_24"
+            android:drawablePadding="8dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

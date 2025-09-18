@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/h4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Top Bar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/h3"
+            android:paddingHorizontal="16dp"
+            android:elevation="4dp">
+
+            <!-- About Us Text -->
+            <TextView
+                android:id="@+id/txtAboutUs"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="About Us"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/h0" />
+
+            <!-- Close Button -->
+            <ImageButton
+                android:id="@+id/btnClose"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/baseline_close_24"
+                android:background="@color/h3"
+                android:contentDescription="Close"/>
+        </RelativeLayout>
+
+        <!-- Content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Service Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/h3"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/txtServiceTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Wash and Iron"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/h0" />
+
+                    <TextView
+                        android:id="@+id/txtServiceDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Full details about the service go here."
+                        android:textSize="16sp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/h4" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
